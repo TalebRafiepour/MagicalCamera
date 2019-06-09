@@ -46,6 +46,7 @@ package com.frosquivel.magicalcameraapp.Activities;
      */
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -175,6 +176,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         saveImage.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("StaticFieldLeak")
             @Override
             public void onClick(View v) {
                 if (Utils.validateMagicalCameraNull(MainActivity.this, principalLayout, magicalCamera)) {
@@ -213,6 +215,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         imageView.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("StaticFieldLeak")
             @Override
             public void onClick(View v) {
                 if (Utils.validateMagicalCameraNull(MainActivity.this, principalLayout, magicalCamera)) {
@@ -243,6 +246,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         floatingBtnRotate.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("StaticFieldLeak")
             @Override
             public void onClick(View v) {
                 if (Utils.validateMagicalCameraNull(MainActivity.this, principalLayout, magicalCamera)) {
@@ -269,6 +273,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         floatingBtnFacialRecognition.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("StaticFieldLeak")
             @Override
             public void onClick(View v) {
 
@@ -314,6 +319,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         floatingBtnSeeString64.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("StaticFieldLeak")
             @Override
             public void onClick(View v) {
                 if (Utils.validateMagicalCameraNull(MainActivity.this, principalLayout, magicalCamera)) {
@@ -363,6 +369,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         floatingBtnPhotoInformation.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("StaticFieldLeak")
             @Override
             public void onClick(View v) {
 
@@ -450,6 +457,7 @@ public class MainActivity extends AppCompatActivity {
         magicalCamera.setResizePhoto(Integer.parseInt(Utils.getSharedPreference(this, Utils.C_PREFERENCE_MC_QUALITY_PICTURE)));
     }
 
+    @SuppressLint("StaticFieldLeak")
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
