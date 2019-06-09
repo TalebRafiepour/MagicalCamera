@@ -110,7 +110,7 @@ use git (sourcetree or others)
 Remember Download the example for understand better the process
 
 ```bash
-git clone https://github.com/fabian7593/MagicalCamera.git
+git clone https://github.com/TalebRafiepour/MagicalCamera.git
 ```
 
 Download from [Here](https://github.com/fabian7593/MagicalCamera/zipball/master)
@@ -124,20 +124,23 @@ Another type download by Bintray from    [ ![Download](https://api.bintray.com/p
 If you need to take photo or select picture, this is your solution.
 This library give a magical solution for take a picture,write and red in device, return your uri real path and obtain yhe private info of the photo and facial recognition, you only need to download this and integrate this in your project, maybe downloading it or import in your gradle, like this.
 
-```bash
-repositories {
-    jcenter()
-}
+```gradle
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
 
 dependencies {
-    compile 'com.frosquivel:magicalcamera:6.0.0'
+    implementation 'com.github.TalebRafiepour:MagicalCamera:6.0.1'
 }
 ```
 
 If you have any problem with this dependence, because the library override any styles, colors or others, please change the last line for this code:
 
 ```bash
- compile('com.frosquivel:magicalcamera:6.0.0@aar') {
+ implementation ('com.github.TalebRafiepour:MagicalCamera:6.0.1@aar') {
         transitive = false;
     }
 ```
